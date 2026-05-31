@@ -1,0 +1,15 @@
+version: 2
+
+# The two fact tables are loaded into BigQuery by load_bigquery.py (an EL step —
+# in production this would be Fivetran/Airbyte syncing Salesforce). dbt treats
+# them as raw sources. The dimensions are dbt seeds, not sources.
+sources:
+  - name: raw
+    database: "{{ env_var('BQ_PROJECT', 'mallpulse-hackathon') }}"
+    schema: "{{ env_var('BQ_DATASET', 'ops_intel') }}"
+    description: "Raw Salesforce-style Case export, landed by load_bigquery.py."
+    tables:
+      - name: fact_cases
+        description: "One row per support case (the Salesforce Case object)."
+      - name: fact_case_comments
+        description: "Threaded client ↔ agent messages, one row per message."

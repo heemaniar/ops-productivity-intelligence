@@ -1,0 +1,121 @@
+client_id,client_name,client_type,segment,region,state,book_size_policies,primary_contact,onboarded_date
+CLI0001,Heritage Insurance Services,RIA,Enterprise,South,TN,679,Linda Scott,2023-12-11
+CLI0002,Anchor Financial Group,Independent Advisor,Small,Midwest,MN,97,Robert Allen,2019-11-22
+CLI0003,Beacon Wealth Management,Independent Advisor,Mid-Market,South,FL,152,George Phillips,2023-05-14
+CLI0004,Anchor Insurance Agency,Independent Advisor,Mid-Market,South,TX,214,Carol Clark,2022-04-11
+CLI0005,Cornerstone Financial Advisors,BGA,Small,Midwest,WI,72,Donna Walker,2021-04-18
+CLI0006,Cedar Insurance Agency,IMO,Mid-Market,Midwest,WI,148,Mary Turner,2024-01-19
+CLI0007,Northstar Benefits Group,Bank Channel,Mid-Market,South,TN,148,Daniel Scott,2019-07-14
+CLI0008,Cornerstone Advisory,RIA,Small,Midwest,IL,30,Mark King,2022-01-07
+CLI0009,Keystone Benefits Group,RIA,Mid-Market,Northeast,CT,370,Robert Robinson,2021-07-11
+CLI0010,Keystone Financial Advisors,RIA,Mid-Market,Midwest,MN,254,Karen Thompson,2023-01-19
+CLI0011,Redwood Wealth Partners,IMO,Small,Northeast,CT,84,Nancy Roberts,2020-10-29
+CLI0012,Riverbend Benefits Group,Bank Channel,Mid-Market,West,AZ,127,Kevin Campbell,2021-09-23
+CLI0013,Beacon Financial Group,RIA,Mid-Market,Northeast,MA,233,Kevin Green,2019-10-04
+CLI0014,Lakeshore Financial Network,Independent Advisor,Small,Northeast,MA,117,Patricia Turner,2019-07-30
+CLI0015,Cedar Benefits Group,Independent Advisor,Small,West,WA,119,Sharon Allen,2021-07-13
+CLI0016,Sterling Financial Advisors,Independent Advisor,Small,South,NC,40,Carol Young,2019-09-20
+CLI0017,Lakeshore Insurance Services,Bank Channel,Mid-Market,South,VA,244,Karen Scott,2021-08-19
+CLI0018,Redwood Financial Advisors,Independent Advisor,Mid-Market,Midwest,OH,165,Jennifer Campbell,2022-10-12
+CLI0019,Evergreen Financial Group,Bank Channel,Mid-Market,South,GA,189,Elizabeth Anderson,2022-09-17
+CLI0020,Harbor Financial Advisors,RIA,Small,Northeast,NJ,37,Kevin Hill,2021-03-07
+CLI0021,Magnolia Financial Network,BGA,Enterprise,West,AZ,655,Joseph Green,2020-05-09
+CLI0022,Crestview Financial Advisors,Independent Advisor,Mid-Market,West,AZ,170,Patricia Robinson,2022-05-31
+CLI0023,Heritage Insurance Agency,Independent Advisor,Small,West,CO,104,Linda Scott,2023-01-22
+CLI0024,Magnolia Financial Group,Bank Channel,Enterprise,West,WA,921,George Young,2020-07-14
+CLI0025,Meridian Insurance Agency,BGA,Mid-Market,Northeast,PA,142,Daniel Nelson,2023-06-18
+CLI0026,Bluestone Capital,Independent Advisor,Small,West,NV,40,William Nelson,2020-11-29
+CLI0027,Fairway & Associates,BGA,Small,Midwest,WI,103,Susan Clark,2022-06-15
+CLI0028,Birchwood Wealth Management,RIA,Small,West,NV,18,Robert Parker,2021-05-31
+CLI0029,Westbridge Capital,Wirehouse Branch,Mid-Market,Northeast,NJ,381,Carol Mitchell,2020-10-07
+CLI0030,Highland Wealth Management,RIA,Small,Northeast,NJ,102,Joseph Evans,2022-07-26
+CLI0031,Riverbend Advisory,BGA,Small,Midwest,MO,76,James Anderson,2020-10-07
+CLI0032,Riverbend Capital,Independent Advisor,Mid-Market,South,NC,389,Cynthia Evans,2020-11-22
+CLI0033,Meridian Retirement Solutions,Independent Advisor,Small,West,AZ,33,David Wright,2022-03-18
+CLI0034,Magnolia Insurance Agency,BGA,Mid-Market,West,NV,240,Robert Campbell,2020-11-23
+CLI0035,Cedar Financial Advisors,BGA,Small,Midwest,MN,23,Cynthia Phillips,2022-10-02
+CLI0036,Heritage Wealth Partners,BGA,Small,South,VA,81,Patricia Walker,2023-10-21
+CLI0037,Harbor Financial Group,RIA,Small,Midwest,MO,50,Michael Turner,2019-07-15
+CLI0038,Fairway Insurance Agency,RIA,Mid-Market,South,FL,553,Carol Mitchell,2020-10-28
+CLI0039,Summit & Associates,BGA,Enterprise,West,AZ,727,David Hall,2023-03-12
+CLI0040,Summit Capital,Independent Advisor,Small,Midwest,WI,110,Richard Young,2022-01-21
+CLI0041,Trinity Financial Advisors,Independent Advisor,Mid-Market,Midwest,MN,316,Donna Roberts,2020-10-14
+CLI0042,Fairway Wealth Management,Bank Channel,Mid-Market,South,FL,126,Carol Clark,2019-02-17
+CLI0043,Keystone Wealth Management,Bank Channel,Mid-Market,West,CO,247,James Edwards,2022-09-13
+CLI0044,Riverbend Insurance Services,Independent Advisor,Small,Midwest,WI,75,Mary Wright,2023-05-29
+CLI0045,Redwood Wealth Management,Bank Channel,Small,South,TN,31,Mary Allen,2023-07-26
+CLI0046,Northstar Capital,Bank Channel,Small,West,AZ,29,Carol Anderson,2019-01-23
+CLI0047,Highland Wealth Partners,IMO,Mid-Market,South,TN,209,Paul Hall,2019-02-01
+CLI0048,Birchwood Capital,BGA,Enterprise,South,TN,1121,Jennifer Parker,2019-05-24
+CLI0049,Keystone Capital,Bank Channel,Mid-Market,Midwest,MN,189,Linda Green,2023-03-21
+CLI0050,Vanguard Retirement Solutions,RIA,Small,West,CA,92,David Campbell,2019-12-14
+CLI0051,Cornerstone Wealth Partners,Wirehouse Branch,Enterprise,Midwest,OH,829,William Clark,2020-08-25
+CLI0052,Vanguard Advisory,IMO,Mid-Market,West,WA,183,Donna Allen,2019-04-17
+CLI0053,Pinnacle & Associates,Wirehouse Branch,Mid-Market,South,GA,162,Karen Hall,2020-03-23
+CLI0054,Beacon & Associates,Independent Advisor,Mid-Market,Northeast,PA,186,Kevin Anderson,2019-08-12
+CLI0055,Sterling Retirement Solutions,BGA,Mid-Market,Northeast,NY,131,Cynthia Allen,2024-01-13
+CLI0056,Lakeshore Wealth Partners,Independent Advisor,Small,West,WA,112,William Edwards,2024-04-23
+CLI0057,Westbridge Financial Network,IMO,Small,Northeast,CT,40,Nancy Parker,2018-12-25
+CLI0058,Liberty Financial Group,BGA,Mid-Market,Midwest,MI,233,James Phillips,2023-12-11
+CLI0059,Beacon Capital,RIA,Mid-Market,West,CA,136,William Robinson,2022-04-06
+CLI0060,Vanguard Financial Group,Wirehouse Branch,Mid-Market,Northeast,MA,434,Sandra Clark,2020-01-26
+CLI0061,Granite Wealth Management,Wirehouse Branch,Small,Midwest,MI,106,Mary Walker,2022-12-11
+CLI0062,Crestview Capital,Independent Advisor,Small,Midwest,MO,26,Patricia Young,2019-02-23
+CLI0063,Meridian Financial Group,Independent Advisor,Mid-Market,Northeast,CT,135,Carol Hall,2024-07-19
+CLI0064,Evergreen Benefits Group,RIA,Enterprise,West,NV,685,Nancy Mitchell,2019-11-28
+CLI0065,Fairway Financial Advisors,RIA,Small,Northeast,MA,105,David Parker,2022-03-07
+CLI0066,Sequoia Financial Network,IMO,Small,Midwest,IL,66,Michael Anderson,2020-11-09
+CLI0067,Beacon Financial Network,BGA,Small,Northeast,NY,50,Donna Green,2024-02-19
+CLI0068,Westbridge Wealth Management,RIA,Small,Northeast,NY,57,Daniel Walker,2021-06-20
+CLI0069,Pinnacle Capital,Independent Advisor,Small,South,GA,113,Carol Wright,2020-09-02
+CLI0070,Lakeshore Capital,IMO,Small,Midwest,MI,51,Joseph Martinez,2024-09-28
+CLI0071,Keystone Financial Network,Independent Advisor,Mid-Market,Midwest,IL,571,William Martinez,2024-09-12
+CLI0072,Sterling Financial Group,IMO,Small,Northeast,NY,115,Mark Hill,2022-02-22
+CLI0073,Westbridge Insurance Services,Bank Channel,Mid-Market,South,FL,163,Elizabeth Evans,2019-03-19
+CLI0074,Lakeshore Wealth Management,RIA,Mid-Market,South,FL,541,Paul Edwards,2019-02-01
+CLI0075,Keystone Insurance Agency,Bank Channel,Mid-Market,West,CA,574,James Thompson,2022-03-06
+CLI0076,Harbor Financial Network,Wirehouse Branch,Mid-Market,Northeast,PA,122,Carol Thompson,2020-07-13
+CLI0077,Crestview Financial Group,BGA,Mid-Market,Midwest,MN,200,Cynthia Martinez,2024-09-19
+CLI0078,Sequoia Wealth Management,RIA,Mid-Market,West,NV,287,Sharon Nelson,2024-01-06
+CLI0079,Liberty Wealth Partners,Independent Advisor,Mid-Market,Northeast,NJ,124,Sharon Phillips,2022-06-15
+CLI0080,Vanguard Benefits Group,Independent Advisor,Small,South,TX,29,Sandra Phillips,2021-07-14
+CLI0081,Crestview Advisory,RIA,Mid-Market,West,OR,267,George Evans,2021-01-13
+CLI0082,Bluestone Financial Group,Independent Advisor,Mid-Market,South,VA,331,David Campbell,2023-08-22
+CLI0083,Cornerstone Benefits Group,BGA,Mid-Market,South,TN,215,David King,2023-06-05
+CLI0084,Beacon Benefits Group,Independent Advisor,Small,West,CO,64,Daniel Young,2023-11-24
+CLI0085,Sterling Advisory,Independent Advisor,Mid-Market,Midwest,OH,124,Sharon Hill,2023-09-29
+CLI0086,Liberty Retirement Solutions,RIA,Small,Midwest,MI,87,Linda Parker,2019-01-19
+CLI0087,Meridian Advisory,Wirehouse Branch,Small,South,NC,113,James Walker,2019-04-21
+CLI0088,Summit Benefits Group,IMO,Mid-Market,South,NC,476,Susan Green,2023-03-06
+CLI0089,Fairway Retirement Solutions,IMO,Mid-Market,West,AZ,587,Linda Hall,2020-12-17
+CLI0090,Birchwood Financial Group,Independent Advisor,Mid-Market,Northeast,PA,271,Joseph Roberts,2024-01-10
+CLI0091,Beacon Retirement Solutions,RIA,Mid-Market,South,GA,243,Linda Thompson,2024-03-19
+CLI0092,Fairway Financial Network,RIA,Mid-Market,Northeast,NJ,272,William Baker,2023-02-01
+CLI0093,Keystone Retirement Solutions,Bank Channel,Mid-Market,Midwest,IL,146,Cynthia Edwards,2019-12-16
+CLI0094,Sundial Wealth Management,RIA,Mid-Market,Midwest,MO,138,Karen Adams,2024-03-14
+CLI0095,Magnolia Insurance Services,BGA,Small,Northeast,NJ,80,Nancy Baker,2023-04-30
+CLI0096,Heritage Capital,Independent Advisor,Mid-Market,Northeast,PA,141,George Allen,2021-11-02
+CLI0097,Trinity Financial Network,Independent Advisor,Enterprise,South,TX,1134,David Hill,2022-12-10
+CLI0098,Lakeshore Benefits Group,BGA,Mid-Market,Midwest,MN,324,Karen Clark,2021-01-08
+CLI0099,Trinity Advisory,Independent Advisor,Small,Midwest,WI,109,Robert Wright,2020-12-02
+CLI0100,Evergreen Retirement Solutions,Bank Channel,Small,Northeast,NY,97,Sharon Baker,2022-06-28
+CLI0101,Northstar Financial Advisors,IMO,Small,Northeast,PA,68,William Roberts,2024-01-22
+CLI0102,Meridian Insurance Services,Independent Advisor,Mid-Market,Midwest,MN,207,Joseph Phillips,2021-12-20
+CLI0103,Vanguard Financial Advisors,Bank Channel,Mid-Market,Northeast,NJ,211,Mary Baker,2024-07-05
+CLI0104,Birchwood Benefits Group,Independent Advisor,Small,South,TN,40,Daniel Adams,2020-05-13
+CLI0105,Evergreen Wealth Partners,Independent Advisor,Mid-Market,Midwest,MO,229,Linda Evans,2018-11-24
+CLI0106,Birchwood Financial Network,Independent Advisor,Small,South,TX,88,Cynthia Clark,2024-04-24
+CLI0107,Evergreen Insurance Agency,RIA,Mid-Market,West,WA,535,George Young,2021-05-07
+CLI0108,Oakmont & Associates,Independent Advisor,Mid-Market,West,CO,170,Mark Hall,2021-05-21
+CLI0109,Sterling Capital,Bank Channel,Enterprise,Midwest,IL,696,Carol King,2024-09-28
+CLI0110,Vanguard Capital,RIA,Small,Northeast,PA,98,Paul Allen,2022-01-14
+CLI0111,Summit Financial Advisors,Independent Advisor,Small,Northeast,PA,114,Donna Phillips,2022-07-30
+CLI0112,Oakmont Wealth Partners,Independent Advisor,Mid-Market,Northeast,MA,194,Jennifer Nelson,2019-12-30
+CLI0113,Granite & Associates,RIA,Mid-Market,Northeast,PA,383,David Anderson,2020-09-09
+CLI0114,Beacon Advisory,Wirehouse Branch,Mid-Market,South,FL,246,Jennifer Adams,2021-04-05
+CLI0115,Evergreen Capital,Independent Advisor,Small,Northeast,CT,48,Patricia Allen,2019-03-13
+CLI0116,Bluestone Financial Advisors,Wirehouse Branch,Mid-Market,West,AZ,174,Mary Hall,2023-02-11
+CLI0117,Summit Insurance Agency,IMO,Mid-Market,Midwest,OH,151,Joseph Adams,2024-01-30
+CLI0118,Lakeshore & Associates,RIA,Small,Northeast,NJ,100,Richard Hall,2023-11-12
+CLI0119,Pinnacle Financial Network,Independent Advisor,Small,South,GA,82,Richard Adams,2020-07-05
+CLI0120,Pinnacle Wealth Partners,Independent Advisor,Enterprise,West,OR,715,Karen Robinson,2023-11-07

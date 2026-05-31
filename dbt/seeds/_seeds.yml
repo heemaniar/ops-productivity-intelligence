@@ -1,0 +1,47 @@
+version: 2
+
+seeds:
+  - name: dim_vendor
+    description: "Insurance carriers (12). Small static reference data — seeded."
+    columns:
+      - name: vendor_id
+        tests: [unique, not_null]
+      - name: product_lines
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Annuity", "Life", "Life & Annuity"]
+
+  - name: dim_agent
+    description: "Operations team members (8)."
+    columns:
+      - name: agent_id
+        tests: [unique, not_null]
+
+  - name: dim_client
+    description: "Advisory firms / agencies (Salesforce Accounts, 120)."
+    columns:
+      - name: client_id
+        tests: [unique, not_null]
+      - name: segment
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Enterprise", "Mid-Market", "Small"]
+
+  - name: dim_case_type
+    description: "Ticket-type catalog / taxonomy (28)."
+    columns:
+      - name: case_type_id
+        tests: [unique, not_null]
+      - name: default_priority
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Low", "Medium", "High", "Critical"]
+      - name: category
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Product Information", "New Business", "Documents",
+                         "Policy Servicing", "Process", "Claims & Maturity", "Technical"]

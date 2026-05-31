@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fct_cases
+    description: >
+      Enriched case fact — one row per case, joined to vendor/agent/client dims
+      with date helpers and a KB-period flag. The grain the Looker dashboard
+      sits on.
+    columns:
+      - name: case_number
+        tests: [unique, not_null]
+      - name: is_post_kb
+        description: "True if created on/after the KB launch (var: kb_launch)."
+
+  - name: kb_impact_monthly
+    description: "Monthly handle-time / SLA / FCR by KB-addressability — the ↑24% before/after chart."
+    columns:
+      - name: created_month
+        tests: [not_null]
+
+  - name: pattern_pareto
+    description: "Per case type: volume, handle time, FCR, reopen — Pareto/bubble + KB backlog."
+    columns:
+      - name: subject
+        tests: [not_null]
+
+  - name: agent_scorecard
+    description: "Per agent: volume, handle time, SLA, FCR, CSAT."
+    columns:
+      - name: agent_name
+        tests: [not_null]
+
+  - name: mistag_routing
+    description: "True vs recorded category — intake mis-routing heatmap."

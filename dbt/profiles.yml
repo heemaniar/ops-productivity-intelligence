@@ -1,0 +1,20 @@
+# dbt profile for the Operations Productivity Intelligence project.
+# Uses BigQuery via gcloud Application Default Credentials (no key file):
+#   gcloud auth application-default login
+#
+# This profile lives in the project so the repo is self-contained. Point dbt at
+# it with:  dbt build --profiles-dir .   (run from the dbt/ directory)
+# or:        export DBT_PROFILES_DIR=$(pwd)
+#
+# Project / dataset / location come from the same env vars as load_bigquery.py.
+ops_intel:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('BQ_PROJECT', 'mallpulse-hackathon') }}"
+      dataset: "{{ env_var('BQ_DATASET', 'ops_intel') }}"
+      location: "{{ env_var('BQ_LOCATION', 'US') }}"
+      threads: 4
+      priority: interactive

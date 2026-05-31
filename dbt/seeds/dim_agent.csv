@@ -1,0 +1,9 @@
+agent_id,agent_name,role,team,specialization,hire_date,seniority_years
+AGT01,Marcus Bell,Operations Team Lead,Client Services Operations,New Business,2019-03-04,6.2
+AGT02,Priya Nair,Senior Ops Specialist,Client Services Operations,Annuity Servicing,2020-06-15,5.0
+AGT03,Diego Ramirez,Senior Ops Specialist,Client Services Operations,Claims & Maturity,2021-01-11,4.4
+AGT04,Aisha Khan,Ops Specialist,Client Services Operations,New Business,2022-09-06,2.8
+AGT05,Tom Whitfield,Ops Specialist,Client Services Operations,In-Force Service,2023-02-20,2.3
+AGT06,Yuki Tanaka,Ops Specialist,Client Services Operations,Annuity Servicing,2023-08-14,1.8
+AGT07,Sofia Romano,Ops Specialist,Client Services Operations,In-Force Service,2024-04-01,1.2
+AGT08,Jamal Carter,Ops Associate,Client Services Operations,Documents & Intake,2024-10-07,0.6

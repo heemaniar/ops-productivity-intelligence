@@ -1,0 +1,13 @@
+vendor_id,vendor_name,product_lines,portal_name,avg_processing_days
+VEN001,Pacific Life,Life & Annuity,PacificXpress,9
+VEN002,Lincoln Financial,Life & Annuity,LincolnDesktop,11
+VEN003,Nationwide,Life & Annuity,Nationwide@Work,8
+VEN004,Athene,Annuity,Athene Connect,7
+VEN005,Allianz Life,Annuity,Allianz ACT,10
+VEN006,Prudential,Life & Annuity,Prudential eOffice,12
+VEN007,MassMutual,Life,MM FieldNet,13
+VEN008,Jackson National,Annuity,Jackson InfoSource,8
+VEN009,Brighthouse Financial,Life & Annuity,Brighthouse e-App,9
+VEN010,Corebridge Financial,Life & Annuity,Corebridge Connect,10
+VEN011,Equitable,Life & Annuity,Equitable EQ,11
+VEN012,Symetra,Annuity,Symetra eApp,7

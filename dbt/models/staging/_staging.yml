@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_cases
+    description: "Cleaned case grain from the raw Salesforce-style Case export."
+    columns:
+      - name: case_number
+        description: "Business key for a case."
+        tests: [unique, not_null]
+      - name: case_id
+        tests: [not_null]
+      - name: client_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_client')
+                field: client_id
+      - name: owner_agent_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_agent')
+                field: agent_id
+      - name: vendor_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_vendor')
+                field: vendor_id
+      - name: case_type_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_case_type')
+                field: case_type_id
+      - name: category
+        description: "True ticket category (7 ops queues)."
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Product Information", "New Business", "Documents",
+                         "Policy Servicing", "Process", "Claims & Maturity", "Technical"]
+      - name: status
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Closed", "New", "In Progress", "Waiting on Client",
+                         "Waiting on Carrier", "Escalated"]
+
+  - name: stg_case_comments
+    description: "Threaded client/agent messages."
+    columns:
+      - name: case_number
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_cases')
+                field: case_number

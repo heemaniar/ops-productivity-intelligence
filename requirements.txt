@@ -1,0 +1,21 @@
+# Operations Productivity Intelligence — Python dependencies
+
+# Data generation & analysis
+numpy
+pandas
+
+# Classic ML — unsupervised pattern discovery + validation (ml_patterns.py)
+scikit-learn
+
+# Claude AI layer — triage bake-off & KB drafting (ml_classify.py, analyze_patterns.py --llm)
+anthropic
+
+# Warehouse path (Looker) — optional
+google-cloud-bigquery   # load_bigquery.py lands the raw fact tables
+pyarrow
+dbt-bigquery            # dbt seeds the dims + builds staging/marts (cd dbt && dbt build)
+# ⚠️  dbt-core supports Python 3.9–3.12 (NOT 3.14). If your main .venv is 3.14,
+#     create a separate dbt env:
+#       brew install python@3.12
+#       python3.12 -m venv .venv-dbt && source .venv-dbt/bin/activate
+#       pip install dbt-bigquery

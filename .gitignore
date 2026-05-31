@@ -1,0 +1,16 @@
+.venv/
+.venv-dbt/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+# Generated artifacts (regenerate with simulate_ops_data.py)
+# Note: dim seeds live in dbt/seeds/ and ARE committed; data/ is fully regenerable.
+data/
+out/
+
+# dbt artifacts
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/.user.yml

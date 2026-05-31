@@ -1,0 +1,29 @@
+case_type_id,category,subcategory,case_type_name,default_priority,sla_target_hours,base_handle_minutes,fcr_rate,reopen_rate,escalation_rate,kb_addressable
+CT001,Product Information,Features & Riders,Product feature / rider question,Medium,24,22,0.78,0.05,0.03,True
+CT002,Product Information,Rates & Crediting,Annuity rate / crediting question,Medium,24,18,0.8,0.04,0.02,True
+CT003,Product Information,Comparison,Cross-vendor product comparison,Low,48,35,0.6,0.07,0.04,True
+CT004,Product Information,Suitability,Suitability / illustration request,Medium,24,40,0.55,0.1,0.08,False
+CT005,New Business,Application Help,Application form completion help,Medium,24,28,0.62,0.1,0.05,True
+CT006,New Business,NIGO,Missing / incomplete application info (NIGO),High,16,34,0.45,0.22,0.1,True
+CT007,New Business,E-Signature,E-signature / DocuSign issue,High,8,16,0.7,0.08,0.06,True
+CT008,New Business,Submission,Submission to carrier portal failed,High,8,24,0.58,0.12,0.14,False
+CT009,New Business,Status,Application status check,Low,24,10,0.88,0.06,0.02,True
+CT010,New Business,Underwriting,Underwriting requirement / medical exam,Medium,24,30,0.5,0.16,0.12,False
+CT011,Documents,Form Request,Required documents / forms list request,Low,24,12,0.85,0.05,0.02,True
+CT012,Documents,Wrong Form,Wrong / outdated form version,Medium,24,15,0.72,0.1,0.04,True
+CT013,Documents,Upload,Document upload failure,Medium,16,14,0.74,0.09,0.05,True
+CT014,Documents,1035 Exchange,Replacement / 1035 exchange paperwork,High,24,45,0.4,0.2,0.16,False
+CT015,Policy Servicing,Beneficiary,Beneficiary change request,Medium,24,20,0.68,0.12,0.05,True
+CT016,Policy Servicing,Contact Update,Address / contact info update,Low,24,10,0.9,0.04,0.01,True
+CT017,Policy Servicing,Billing,Premium payment / billing question,Medium,16,22,0.66,0.12,0.06,True
+CT018,Policy Servicing,Cash Value,Policy values / cash value inquiry,Low,24,18,0.75,0.07,0.03,True
+CT019,Policy Servicing,Loan/Withdrawal,Policy loan or withdrawal request,Medium,24,30,0.55,0.14,0.08,False
+CT020,Policy Servicing,Annuity Growth,Annuity annual growth / statement question,Low,24,20,0.72,0.08,0.03,True
+CT021,Process,Commission,Commission / compensation question,Medium,24,24,0.64,0.12,0.07,True
+CT022,Process,Licensing,Carrier appointment / licensing question,Medium,24,26,0.6,0.12,0.06,True
+CT023,Process,How-To,General process / how-to question,Low,24,14,0.82,0.05,0.02,True
+CT024,Claims & Maturity,Death Claim,Death claim filing assistance,Critical,8,50,0.35,0.18,0.2,False
+CT025,Claims & Maturity,Annuitization,Annuitization / maturity question,Medium,24,34,0.52,0.12,0.08,False
+CT026,Claims & Maturity,Surrender,Surrender / full withdrawal request,High,16,32,0.5,0.14,0.1,False
+CT027,Technical,Access,Portal login / access issue,High,8,12,0.76,0.08,0.05,True
+CT028,Technical,Data Request,Book-of-business data / report request,Low,24,26,0.7,0.08,0.04,True

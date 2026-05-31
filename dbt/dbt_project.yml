@@ -1,0 +1,45 @@
+name: 'ops_intel'
+version: '1.0.0'
+config-version: 2
+profile: 'ops_intel'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+clean-targets: ["target", "dbt_packages"]
+
+# Knowledge-base program go-live — drives the before/after efficiency analysis.
+vars:
+  kb_launch: '2025-09-01'
+
+models:
+  ops_intel:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: view
+
+seeds:
+  ops_intel:
+    +quote_columns: false
+    dim_agent:
+      +column_types:
+        hire_date: date
+        seniority_years: float64
+    dim_client:
+      +column_types:
+        book_size_policies: int64
+        onboarded_date: date
+    dim_case_type:
+      +column_types:
+        sla_target_hours: int64
+        base_handle_minutes: int64
+        fcr_rate: float64
+        reopen_rate: float64
+        escalation_rate: float64
+        kb_addressable: boolean
+    dim_vendor:
+      +column_types:
+        avg_processing_days: int64
