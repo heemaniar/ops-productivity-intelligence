@@ -69,7 +69,9 @@ def main():
     print(f"→ dataset {PROJECT}.{DATASET} ({LOCATION})")
 
     for table, schema in SCHEMAS.items():
-        df = pd.read_csv(DATA / f"{table}.csv")
+        # case_number is a zero-padded id ("00103002") — keep it STRING, or pandas
+        # infers int64 (loses leading zeros and fails the STRING column load).
+        df = pd.read_csv(DATA / f"{table}.csv", dtype={"case_number": str})
         # Coerce blanks in nullable typed columns to NaN/NaT.
         for f in schema:
             if f.name not in df.columns:
