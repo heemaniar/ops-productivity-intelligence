@@ -10,3 +10,4 @@ CSAT,"Mean post-resolution satisfaction, 1-5.",AVG(csat_score),Closed and survey
 Escalation %,Share of cases escalated beyond first owner.,"AVG(IF(escalated,1,0))",Closed cases,< 8%,Ops Lead
 Intake Mis-tag %,Share of cases whose recorded category differs from the true category.,"AVG(IF(category_tagged<>category,1,0))",All cases,< 5%,Intake / Ops
 KB Handle-Time Reduction,"% drop in AHT for KB-addressable cases, pre vs post 2025-09-01 KB launch.",1 - avg(post)/avg(pre) on kb_addressable,"Closed, kb_addressable",sustain,Enablement
+KB-Deflectable Hours / Month,Modeled agent-hours/month recoverable by building the prioritized KB backlog.,volume x deflection rate x AHT / 60 (see analyze_patterns.py),Top KB backlog,grow,Enablement
