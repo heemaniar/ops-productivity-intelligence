@@ -45,3 +45,12 @@ seeds:
               arguments:
                 values: ["Product Information", "New Business", "Documents",
                          "Policy Servicing", "Process", "Claims & Maturity", "Technical"]
+
+  - name: metric_definitions
+    description: >
+      Canonical KPI definitions — the metrics single source of truth (see METRICS.md).
+      Loaded into the warehouse so the dashboard "Definitions" page reads the same
+      definitions the docs use.
+    columns:
+      - name: kpi
+        tests: [unique, not_null]

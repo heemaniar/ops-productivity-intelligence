@@ -17,6 +17,8 @@ than asserting it.
 > labels. All clients, advisors, agents, cases, messages, dollar amounts and
 > metrics are fictitious and represent no real person or company.
 
+**Start here:** [Live dashboard](https://datastudio.google.com/s/g6Y--JQTi6E) · [Decision brief](DECISION_BRIEF.md) (what leadership should do) · [Metrics dictionary](METRICS.md) (the KPI single source of truth)
+
 ---
 
 ## Quick start

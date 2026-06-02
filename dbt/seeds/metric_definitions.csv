@@ -1,0 +1,12 @@
+kpi,definition,calculation,population,target,owner
+Case Volume,Number of support cases.,COUNT(case_number),All cases,trend,Ops Lead
+Avg Handle Time (min),Mean active agent touch time per case (not calendar time).,AVG(handle_time_minutes),Closed cases,<= 24,Ops Lead
+First Response Time (min),Mean business-hours minutes from creation to first agent touch.,AVG(first_response_minutes),Cases with a first response,<= 240,Ops Lead
+Resolution Time (hrs),Mean business hours from creation to close.,AVG(resolution_time_hours),Closed cases,within SLA,Ops Lead
+SLA Met %,Share of closed cases resolved within their case-type SLA target.,"AVG(IF(sla_met,1,0))",Closed cases,85%,Ops Lead
+First-Contact Resolution %,"Share resolved on first contact (no reopen, no escalation).","AVG(IF(is_first_contact_resolution,1,0))",Closed cases,65%,Ops Lead
+Reopen %,Share of closed cases reopened at least once.,"AVG(IF(reopened_count>0,1,0))",Closed cases,< 10%,Ops Lead
+CSAT,"Mean post-resolution satisfaction, 1-5.",AVG(csat_score),Closed and surveyed (~59%),>= 4.5,CX Lead
+Escalation %,Share of cases escalated beyond first owner.,"AVG(IF(escalated,1,0))",Closed cases,< 8%,Ops Lead
+Intake Mis-tag %,Share of cases whose recorded category differs from the true category.,"AVG(IF(category_tagged<>category,1,0))",All cases,< 5%,Intake / Ops
+KB Handle-Time Reduction,"% drop in AHT for KB-addressable cases, pre vs post 2025-09-01 KB launch.",1 - avg(post)/avg(pre) on kb_addressable,"Closed, kb_addressable",sustain,Enablement
