@@ -29,7 +29,7 @@ DATASET  = os.getenv("BQ_DATASET", "ops_intel")
 LOCATION = os.getenv("BQ_LOCATION", "US")
 DATA     = Path(__file__).resolve().parent / "data"
 
-# Explicit schemas so timestamps/dates/bools land correctly for Looker.
+# Explicit schemas so timestamps/dates/bools land correctly for Data Studio.
 SF = bigquery.SchemaField
 SCHEMAS = {
     "fact_cases": [

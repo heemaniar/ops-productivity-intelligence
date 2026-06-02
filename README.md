@@ -2,13 +2,16 @@
 
 Synthetic **Salesforce-style Case data** for a Client Services / Operations team that
 supports financial advisors selling **life insurance & annuity** products across
-multiple carriers. Built to demo the resume story:
+multiple carriers. It reconstructs the kind of ops-analytics engagement that drives
+real efficiency wins — surfacing the most common ticket patterns with ML + LLM
+analysis, standing up a knowledge base, and **measuring** the lift end-to-end rather
+than asserting it.
 
-> *Analyzed customer-support & ops productivity using Salesforce + Looker data,
-> integrated LLM analysis to surface the most common ticket patterns, and built
-> targeted knowledge-base content → **↑25% operational efficiency**.*
+> **Headline (measured from the data, shown in the dashboard):** average handle time
+> on knowledge-base-addressable tickets fell **24% (26.0 → 19.7 min)** in the 6 months
+> after the KB launch — every figure traceable to the generated data.
 
-**Stack:** Salesforce (source shape) → CSV/ELT → **BigQuery** → **Looker / Looker Studio**, with a **Python + LLM** layer for ticket-pattern mining and KB drafting.
+**Stack:** Salesforce (source shape) → CSV/ELT → **BigQuery** → **dbt** → **Data Studio**, with a **Python + LLM** layer for ticket-pattern mining and KB drafting.
 
 > ⚠️ **100% synthetic.** Carrier names are real companies used only as realistic
 > labels. All clients, advisors, agents, cases, messages, dollar amounts and
@@ -26,13 +29,13 @@ python simulate_ops_data.py        # 1. generate the dataset → data/*.csv
 python analyze_patterns.py         # 2. rank ticket patterns → KB backlog (out/*.csv)
 python ml_patterns.py              # 3. unsupervised discovery + ARI validation
 python ml_classify.py              # 4. triage bake-off (classic ML; add --claude for the LLM)
-# 5. (optional) warehouse + Looker path:
+# 5. (optional) warehouse + Data Studio path:
 gcloud auth application-default login
 export BQ_PROJECT=mallpulse-hackathon BQ_DATASET=ops_intel
 python load_bigquery.py             #    EL: land raw fact tables in BigQuery
 cd dbt && dbt seed && dbt build     #    dbt: seed dims, build staging+marts, run tests
 dbt docs generate && dbt docs serve #    lineage DAG (great portfolio screenshot)
-#    then assemble the dashboard on the marts → see LOOKER_STUDIO_GUIDE.md
+#    then assemble the dashboard on the marts → see DATA_STUDIO_GUIDE.md
 
 # Claude tiers (need ANTHROPIC_API_KEY):
 export ANTHROPIC_API_KEY=...
@@ -87,35 +90,53 @@ Across 7 categories, modeled on a real annuity/life ops desk:
 - **Claims & Maturity** — death claim, annuitization/maturity, surrender
 - **Technical** — portal access, book-of-business data request
 
-## The "↑25% efficiency" story (built into the data)
+## The ↑24% efficiency story (built into the data)
 
 A **knowledge-base program launches 2025-09-01** (`KB_LAUNCH`). After launch, the
 KB-addressable case types show progressively lower handle time & first-response,
 higher first-contact resolution, and fewer reopens. The generator prints the
 realized lift — **~24% lower handle time** on KB-addressable cases post-launch
-(26.0 → 19.7 min) — a clean before/after for a Looker time-series.
+(26.0 → 19.7 min) — a clean before/after for a Data Studio time-series.
 
 > **Honest framing:** this number is *measured from the data*, not asserted.
 > Quote it as "average handle time on KB-addressable tickets fell 24% over the
 > 6 months after the KB launch," and show the chart — don't stack invented
 > percentages for the ML and LLM layers on top of it.
 
-## Suggested Looker / Looker Studio dashboard
+## Dashboard (Data Studio)
 
-**Executive KPIs (scorecards):** total cases, avg handle time, % SLA met, FCR %,
-avg CSAT, reopen rate — each with period-over-period delta.
+**Live report:** https://datastudio.google.com/s/g6Y--JQTi6E — 4 pages, built directly on the dbt marts.
 
-**Operational efficiency (the headline):**
-- Avg handle time by month, with a **reference line at 2025-09-01** (KB launch)
-- Same series split by `kb_addressable` (true vs false) to isolate KB impact
+### Executive overview
+![Executive overview](docs/screenshots/executive_overview.png)
 
-**Ticket-pattern intelligence:**
-- Volume by `category` / `subject` (Pareto bar) — where the work is
-- Bubble: volume (x) vs avg handle time (y) vs reopen rate (size) per `subject`
-- Table from `out/kb_backlog.csv`: prioritized KB articles + est. hours saved/mo
+KPI scorecards (**7,500** cases · **26.4** min avg handle · **79.0%** SLA met · **60.2%**
+first-contact resolution · **4.4** CSAT · **9.9%** reopen), case volume over time by
+priority, and page filters for priority / category / region / vendor / product line.
 
-**Team & client views:** cases & avg handle time by `owner_agent_id`;
-SLA/CSAT by `client.segment` and `region`; volume by `vendor_name`.
+### Operational efficiency — the ↑24%
+![Operational efficiency](docs/screenshots/operational_efficiency.png)
+
+Pre/post-KB handle time (**26.0 → 19.7 min, −24%**) and first-contact resolution
+(**63% → 70%, +6.8 pts**) on KB-addressable tickets — each shown against a **flat
+control group** (non-KB-addressable: ~41 → 40 min, ~36% → 37% FCR), so the gain is
+attributable to the knowledge base, not a general efficiency trend.
+
+### Team & routing quality — intake mis-routing
+![Intake mis-routing heatmap](docs/screenshots/mistag_heatmap.png)
+
+True vs. recorded category. The diagonal dominates; **~12% of tickets are routed to the
+wrong queue at intake** (adjacent-category confusion, e.g. NIGO ↔ Documents) — the exact
+problem the triage bake-off (Tier 2) targets.
+
+### Warehouse lineage (dbt)
+![dbt lineage graph](docs/screenshots/dbt_lineage.png)
+
+dimension **seeds** + fact **sources** → staging → marts, with data tests and generated docs.
+
+*(Two more pages not shown: **Ticket-pattern intelligence** — Pareto of volume by case
+type + a cost-vs-fixability bubble; and the rest of **Team & routing** — agent scorecard
+with conditional formatting and SLA & handle-time by category. Build steps: `DATA_STUDIO_GUIDE.md`.)*
 
 ## The analysis layers (the portfolio substance)
 
@@ -138,15 +159,15 @@ Three tiers, **no stacked invented numbers** — each result is measured.
 The centerpiece. Same task — route a message to 1 of 7 ops queues — scored two
 ways against ground truth that carries **~12% realistic intake-tag noise**:
 
-- **TF-IDF + Logistic Regression** (trains on 6k examples): **macro-F1 0.855**
-  — essentially at the noise ceiling.
-- **Claude zero-shot** (no training data): run `--claude` to fill in the
-  head-to-head, plus **mis-routed-ticket recovery** (how often each model finds
-  the *true* queue on intake-mislabeled tickets — the real business value of
-  LLM re-classification).
+- **TF-IDF + Logistic Regression** (trains on 6k examples): macro-F1 **0.855**.
+- **Claude zero-shot** (no training data): macro-F1 **0.833**.
+- On the 150-ticket head-to-head, the classifier edges Claude (**0.865 vs 0.833**) and
+  recovers the *true* queue on intake-mislabeled tickets **94.7%** vs Claude's **84.2%**.
 
-The point isn't "LLM wins" — it's demonstrating *judgment* about when an LLM
-earns its cost vs. a cheap trained classifier.
+The takeaway is **judgment, not "the LLM wins"**: for a high-volume, well-defined task
+with labeled history, a $0 classifier beats a per-call LLM — so route triage to the cheap
+model and reserve Claude for the zero-training-data cold start, KB drafting, and reply
+assist (Tier 3).
 
 ### Tier 3 — Claude assist
 

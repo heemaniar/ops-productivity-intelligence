@@ -4,7 +4,7 @@ models:
   - name: fct_cases
     description: >
       Enriched case fact — one row per case, joined to vendor/agent/client dims
-      with date helpers and a KB-period flag. The grain the Looker dashboard
+      with date helpers and a KB-period flag. The grain the Data Studio dashboard
       sits on.
     columns:
       - name: case_number

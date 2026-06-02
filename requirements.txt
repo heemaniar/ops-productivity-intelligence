@@ -10,7 +10,7 @@ scikit-learn
 # Claude AI layer — triage bake-off & KB drafting (ml_classify.py, analyze_patterns.py --llm)
 anthropic
 
-# Warehouse path (Looker) — optional
+# Warehouse path (Data Studio) — optional
 google-cloud-bigquery   # load_bigquery.py lands the raw fact tables
 pyarrow
 dbt-bigquery            # dbt seeds the dims + builds staging/marts (cd dbt && dbt build)

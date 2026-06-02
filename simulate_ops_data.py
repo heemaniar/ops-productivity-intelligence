@@ -4,7 +4,7 @@ simulate_ops_data.py — Operations Productivity Intelligence synthetic dataset.
 Generates Salesforce-style *Case* data for an Operations / Client Services team
 that supports financial advisors selling life insurance & annuity products from
 multiple carriers (vendors). Output is a clean star schema (4 dims + 2 facts)
-designed to land in BigQuery and be analyzed in Looker / Looker Studio, plus
+designed to land in BigQuery and be analyzed in Data Studio, plus
 free-text fields rich enough for LLM ticket-pattern clustering and knowledge-base
 content generation.
 
@@ -19,8 +19,8 @@ Output (CSVs into ./data/):
 Story baked into the data
 ─────────────────────────
 A knowledge-base (KB) program launches 2025-09-01. After launch, the
-KB-addressable case types show ~25% lower handle time & first-response time,
-higher first-contact-resolution, and fewer reopens — the "↑25% operational
+KB-addressable case types show ~24% lower handle time & first-response time,
+higher first-contact-resolution, and fewer reopens — the "↑24% operational
 efficiency" narrative the dashboard is meant to tell.
 
 ⚠️  DISCLAIMER: 100% synthetic. Carrier names are real companies used only as

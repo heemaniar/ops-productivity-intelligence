@@ -1,5 +1,5 @@
 -- Enriched case fact: one row per case, joined to the dimension seeds, with
--- date helpers + KB-period flag. This is the grain the Looker dashboard sits on.
+-- date helpers + KB-period flag. This is the grain the Data Studio dashboard sits on.
 with c as (
     select * from {{ ref('stg_cases') }}
 )
